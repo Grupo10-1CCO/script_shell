@@ -38,7 +38,7 @@ echo "$(tput setaf 10)[SAMP]:$(tput setaf 7) Startando docker."
     
     sudo docker pull dnlydg/bdsamp:1.0
         sudo service mysql stop
-    sudo docker run -d --name ConteinerBD dnlydg/bdsamp:1.0
+    sudo docker run -d -p 3306:3306 --name ConteinerBD dnlydg/bdsamp:1.0
 
 echo "$(tput setaf 10)[SAMP]:$(tput setaf 7) : Instalando o Java "
 
