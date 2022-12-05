@@ -40,14 +40,14 @@ echo "$(tput setaf 10)[SAMP]:$(tput setaf 7) Startando docker."
         sudo service mysql stop
     sudo docker run -d -p 3306:3306 --name ConteinerBD dnlydg/bdsamp:1.0
 
-echo "$(tput setaf 10)[SAMP]:$(tput setaf 7) : Instalando o Java "
+echo "$(tput setaf 10)[SAMP]:$(tput setaf 7) : Instalando o Java GUI"
 
 sudo apt install default-jre default-jdk -y
 
 echo "$(tput setaf 10)[SAMP]:$(tput setaf 7) : Clonando o repostiorio coma a API "
 I
-git clone https://github.com/Grupo10-1CCO/Java.git
+git clone https://github.com/Grupo10-1CCO/samp_jar_gui.git
 
 echo "$(tput setaf 10)[SAMP]:$(tput setaf 7) : Iniciando a API "
-cd Java/sampjframe/target
+cd samp_jar_gui
 java -jar sampjframe-1.0-SNAPSHOT-jar-with-dependencies.jar
